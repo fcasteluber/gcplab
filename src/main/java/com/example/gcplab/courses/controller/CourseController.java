@@ -15,7 +15,7 @@ public class CourseController {
     @GetMapping("/courses")
     public List<Course> getAllCourses()
     {
-        return Arrays.asList(new Course(1, "GCP Microservice 3", "fcasteluber"));
+        return Arrays.asList(new Course(1, "GCP Microservice 4", "fcasteluber"));
     }
 
 }
