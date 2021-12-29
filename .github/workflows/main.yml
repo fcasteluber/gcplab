@@ -30,7 +30,7 @@ jobs:
       run: mvn --batch-mode --update-snapshots verify
     
     - name: Copy JAR file
-      run: cp target/*.jar src/main/appengine
+      run: cp --verbose target/*.jar src/main/appengine
       
 
     - name: Deploy to App Engine
