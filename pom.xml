@@ -17,13 +17,7 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>com.google.cloud</groupId>
-			<artifactId>libraries-bom</artifactId>
-			<version>24.0.0</version> <!-- since the BOM manages library versions, the version of google-cloud-storage (or any gcp library) and guava are omitted. -->
-			<type>pom</type>
-			<scope>import</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
