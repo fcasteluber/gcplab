@@ -33,7 +33,8 @@ jobs:
 
     - name: Deploy to App Engine
       id: deploy
-      uses: google-github-actions/deploy-appengine@v0.2.0
+      #uses: google-github-actions/deploy-appengine@v0.2.0
+      uses: ./mvnw -DskipTests package appengine:deploy
       with:
         version: v1
         project_id: ${{ secrets.GCP_PROJECT }}
