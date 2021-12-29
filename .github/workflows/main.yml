@@ -18,8 +18,20 @@ jobs:
   deploy:
     name: Deploying to Google Cloud
     runs-on: ubuntu-latest
+    
+    # Add "id-token" with the intended permissions.
+    permissions:
+      contents: 'read'
+      id-token: 'write'
 
     steps:
+    - uses: 'actions/checkout@v2' # Must come first!
+    
+    # Install gcloud, do not specify authentication.
+    - uses: 'google-github-actions/setup-gcloud@master'
+      with:
+        project_id: 'gcplab-336520'
+    
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
